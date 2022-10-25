@@ -80,6 +80,26 @@ document.writeln(mappa.get(2));
 document.writeln('<br> mi restituisce la size:');
 document.writeln(mappa.size);
 
+
+//metodo per cancellare data la chiave delete()
+
+mappa.delete(4);
+
+
+//stampare la mappa
+document.writeln('<br> ');
+console.log(mappa.keys());
+document.writeln('Stampo la mappa: ');
+let valori = mappa.values(); //mapIterator creo una variabile dove ho i valori
+for (let i=0; i < mappa.size; i++){
+    document.writeln(valori.next().value);
+}
+
+document.writeln('<br>');
+//ciclo  for of per stampare le coppie chiave valore della mappa
+for (let[key, value] of mappa){
+    document.write(` ${key} : ${value}` );//uso backtick 
+}
 </script>
 
 
