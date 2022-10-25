@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>ES 10</title>
+    <p id="ilnumerocasuale"></p>
+    <p id="risultato"></p>
+    <p id="migliore giocatore"></p>
+</head>
+
+    
+    <script>  
+    let dado1Giocatore1 = Math.floor( Math.random()*5 + 1);
+    let dado1Giocatore2 =  Math.floor( Math.random()*5 + 1);
+    
+
+    let dado2Giocatore1 = Math.floor( Math.random()*5 + 1);
+    let dado2Giocatore2 =  Math.floor( Math.random()*5 + 1);
+
+
+    let punteggioGiocatore1 = dado1Giocatore1 + dado2Giocatore1
+    let punteggioGiocatore2 = dado1Giocatore2 + dado2Giocatore2
+    
+  
+    document.getElementById("ilnumerocasuale").innerHTML =  "Il punteggio maggiore è " + Math.max(punteggioGiocatore1,punteggioGiocatore2);
+
+    if (punteggioGiocatore1 == punteggioGiocatore2) {
+        document.getElementById("risultato").innerHTML = "Hanno stesso punteggio";
+  } else {
+    document.getElementById("risultato").innerHTML = "Chi si ha fatto il punteggio maggiore?" ;
+    if (punteggioGiocatore1 > punteggioGiocatore2) {
+        document.getElementById("migliore giocatore").innerHTML = "Giocatore 1" ;
+    } else {
+    document.getElementById("migliore giocatore").innerHTML = "Giocatore 2" ;
+    } 
+  }
+</script>
+<body>
+
+ 
+</body>
+</html>

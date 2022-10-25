@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>ES 12</title>
+</head>
+
+<p id="demo"></p>
+
+<script>
+var numero;
+var contap = 0, contad = 0;
+var arr = [];
+for (var i = 1; i < 8; i++){
+  numero = parseInt(prompt('Inserisci la temperatura del ' + i + ' -simo giorno'));
+  arr.push(numero)
+}
+
+function getMaxOfArray(arr) {
+  return Math.max.apply(null, arr);
+}
+
+
+function getMinOfArray(arr) {
+  return Math.min.apply(null, arr);
+}
+
+
+document.getElementById("demo").innerHTML = "La temperatura massima è " + getMaxOfArray(arr) + ", la minima è "+ getMinOfArray(arr) ;
+
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+
+function getIndex(intero) {
+  if (intero >= 1 && intero <= 7){
+    value='true';
+  } else value='false';
+  return value;
+}
+
+
+
+function giorniSettimana(intero) {
+  if (intero >= 1 && intero <= 7){
+    value='true';
+    {var weekday=new Array(7);
+    weekday[0]="Lunedi";
+    weekday[1]="Martedì";
+    weekday[2]="Mercoledì";
+    weekday[3]="Giovedì";
+    weekday[4]="Venerdì";
+    weekday[5]="Sabato";
+    weekday[6]="Domenica";
+    console.log("Il giorno relativo è" + weekday[intero-1]);}
+  } else value='il valore non è valido';
+  return value;
+}
+
+
+
+</script>
+
+
+<body>
+
+</body>
+</html>

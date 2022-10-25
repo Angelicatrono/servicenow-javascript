@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>es 8</h2>
+Siano 20 e 10 due numeri. <p ></p>
+<p id="risultato"></p>
+
+<script>
+ let operazione = prompt("Inserisci operazione");
+if (operazione == 'somma') {
+  document.getElementById("risultato").innerHTML = "Faccio la somma";
+}
+    let x = 20;
+    let y = 10;
+    let sum = x + y;
+    let sottrazione = x-y;
+    let multiplication = x*y;
+    let division = x/y;
+    let potenza = x^y;
+    let media = (x+y)/2;
+    let modulo = (x%y);
+
+
+switch(operazione)
+    {
+        case 'somma' :
+        document.getElementById("risultato").innerHTML = "Faccio la somma che è " + sum ;
+            break;
+        case 'moltiplicazione' :
+        document.getElementById("risultato").innerHTML = "Faccio la moltiplicazione che è "+ multiplication ;
+
+            break;
+            case 'sottrazione' :
+        document.getElementById("risultato").innerHTML = "Faccio la sottrazione che è "+ sottrazione ;
+
+            break;
+        case 'divisione' :
+        document.getElementById("risultato").innerHTML = "Faccio la divisione che è " +  division ;
+
+            break;
+            case 'modulo' :
+        document.getElementById("risultato").innerHTML = "Faccio il modulo che è " + modulo ;
+
+            break;
+        case 'potenza' :
+        document.getElementById("risultato").innerHTML = "Faccio la potenza che è  " + potenza ;
+
+            break;
+        case 'media' :
+        document.getElementById("risultato").innerHTML = "Faccio la media che è  "+ media ;
+
+            break;
+       default :
+       document.getElementById("risultato").innerHTML = "Faccio niente";
+    }
+
+
+
+</script>
+
+</body>
+</html>

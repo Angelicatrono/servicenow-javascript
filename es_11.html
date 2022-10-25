@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>ES 11</title>
+    <p id="ilnumero"></p>
+    <p id="risultato"></p>
+    <p id="migliore giocatore"></p>
+</head>
+
+    
+    <script>  
+    let num1 = parseInt(prompt("Inserisci voto"));
+    
+  
+    document.getElementById("ilnumero").innerHTML = "Il voto è " + num1;
+
+
+
+  if (num1 < 18 ) {
+        document.getElementById("risultato").innerHTML = "Insufficiente";
+  } else if (num1 >= 18 && num1 < 21)  {
+    document.getElementById("risultato").innerHTML = "Sufficiente";
+} else if (num1 >= 21 && num1 < 24)  {
+    document.getElementById("risultato").innerHTML = "Buono";
+} else if (num1 >= 24 && num1 < 27)  {
+    document.getElementById("risultato").innerHTML = "Distinto";
+} else if (num1 >= 27 && num1 <= 29)  {
+    document.getElementById("risultato").innerHTML = "Ottimo";
+} else {
+    document.getElementById("risultato").innerHTML = "Eccellente";
+}
+  
+</script>
+<body>
+
+ 
+</body>
+</html>

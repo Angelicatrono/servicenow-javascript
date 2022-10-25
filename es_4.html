@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>ES 4</title>
+</head>
+
+
+
+
+<body>
+    <script>
+        var base = 10;
+        var A = new Array();
+        for (i=0; i<base; i++) {
+        A[i]=i+1;
+        }
+        var B = A;
+        document.write('<p><table class="tabella1">');
+        document.write('<tr><td class ="Op">×</td>')
+        for (i=0; i<B.length; i++) {
+        document.write('<td class="tdTabIni">'+B[i]+'</td>')
+        }
+        document.write('</tr>')
+        for (i=0; i<A.length; i++) {
+            document.write('<tr><td class="tdTabIni">'+ A[i]);
+            for (j=0; j<B.length; j++) {
+            document.write('<td class="tdTab">')
+              document.write(A[i]*B[j]);
+            document.write('</td>')
+         }
+         document.write('</tr>')
+         }
+        document.write('</table></p>');
+        document.close()
+         </script>
+
+</body>
+</html>
