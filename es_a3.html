@@ -1,0 +1,99 @@
+<html>
+
+<head>
+    <script>
+        function calcoloGaranzia() {
+            let dataOdierna = new Date();
+            let app = document.querySelector("#ingresso1");
+            let uscita = document.querySelector("#uscita");
+            let dataScadenza = new Date(app.value);
+            dataScadenza.setFullYear(dataScadenza.getFullYear() + 2);
+            if (dataOdierna <= dataScadenza) uscita.value = "Oggetto in     garanzia";
+            else uscita.value = "Garanzia scaduta";
+        }
+    </script>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        input[type='number'] {
+            width: 40px;
+        }
+
+        #telaio {
+            width: 90%;
+            margin: 0px;
+            border: 1px solid gray;
+            line-height: 150%;
+            color: black;
+            background-color: #ffffcc;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+
+        #testata {
+            font-size: 130%;
+            text-align: center;
+        }
+
+        #fondo {
+            font-size: 85%;
+            text-align: center;
+        }
+
+        #output {
+            font-size: 85%;
+            text-align: center;
+        }
+
+        #testata,
+        #fondo {
+            padding: 0.5em;
+            color: white;
+            background-color: #cc9900;
+            clear: left;
+        }
+
+        #sinistro {
+            float: left;
+            width: 51%;
+            margin-top: 8px;
+            padding: 1%;
+            text-align: left;
+        }
+
+        #destro {
+            float: left;
+            width: 42%;
+            border-left: 1px solid gray;
+            padding: 2%;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="modulo" method="post" action="">
+        <div id="telaio">
+            <div id="testata">Calcolo della scadenza della garanzia</div>
+
+            <div id="sinistro">
+                Inserisci la data di acquisto
+            </div>
+
+            <div id="destro">
+                <input type="date" id="ingresso1">
+            </div>
+
+            <div id="fondo">
+                <input type="button" name="esegui" value="Esegui" onclick="calcoloGaranzia()">
+            </div>
+            <div id="output">
+                <textarea id="uscita" rows="20"></textarea>
+            </div>
+        </div>
+    </form>
+
+</body>
+
+</html>

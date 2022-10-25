@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Numero di Giorni</title>
+    <script>
+        function calcoloGiorni() {
+            let primo = document.querySelector("#ingresso1");
+            let uscita = document.querySelector("#uscita");
+            let oggi = new Date();
+            let dataNascita = new Date(primo.value);
+            let calc = oggi - dataNascita;
+            let app = calc / (60 * 60 * 24 * 1000);
+            let giorni = Math.floor(app);
+            app = (app - Math.floor(app)) * 24;//app-giorni
+            let ore = Math.floor(app);
+            app = app - ore;
+            app = app * 60;
+            let minuti = Math.floor(app);
+            app = app - minuti;
+            let secondi = Math.floor(app * 60);
+            uscita.value = "Fino ad oggi hai vissuto\n" + giorni + " giorni\n" + ore + " ore\n" + minuti + " minuti\n" + secondi + " secondi";
+        }   
+    </script>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        input[type='number'] {
+            width: 40px;
+        }
+
+        #telaio {
+            width: 90%;
+            margin: 0px;
+            border: 1px solid gray;
+            line-height: 150%;
+            font-weight: bold;
+            color: black;
+            background-color: #9dbfb1;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+
+        #testata {
+            font-size: 130%;
+            text-align: center;
+        }
+
+        #fondo {
+            font-size: 85%;
+            text-align: center;
+        }
+
+        #output {
+            font-size: 85%;
+            text-align: center;
+        }
+
+        #testata,
+        #fondo {
+            padding: 0.5em;
+            color: white;
+            background-color: #86495b;
+            clear: left;
+        }
+
+        #sinistro {
+            float: left;
+            width: 51%;
+            margin-top: 8px;
+            padding: 1%;
+            text-align: left;
+        }
+
+        #destro {
+            float: left;
+            width: 42%;
+            border-left: 1px solid gray;
+            padding: 2%;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="modulo" method="post" action="">
+        <div id="telaio">
+            <div id="testata">Calcola il numero dei giorni che hai vissuto</div>
+
+            <div id="sinistro">
+                Inserisci la data di nascita
+            </div>
+
+            <div id="destro">
+                <input type="date" id="ingresso1">
+            </div>
+
+            <div id="fondo">
+                <input type="button" name="esegui" value="Esegui" onclick="calcoloGiorni()">
+            </div>
+            <div id="output">
+                <textarea id="uscita" rows="20"></textarea>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <script type="text/javascript" language="javascript">
+        let valoreSesso = null;
+        function controlloCAP() {
+            if (document.eseform.cap.value.length != 5) {
+                alert("Il CAP deve contenere 5 cifre");
+                return false;
+            }
+            let v = parseInt(document.eseform.cap.value);
+            if (isNaN(v)) {
+                alert("Il CAP deve essere un numero");
+                return false;
+            }
+            return true;
+        }
+        function controlloNome() {
+            let v = parseInt(document.eseform.nome.value);
+            if (!isNaN(v)) {
+                alert("Il cognome e nome non devono essere un numero");
+                return false;
+            }
+            return true;
+        }
+        function validaInvio() {
+            if (document.eseform.nome.value == "") {
+                alert("Inserire cognome e nome");
+                return false;
+            }
+            if (valoreSesso == null) {
+                alert("Selezionare il sesso");
+                return false;
+            }
+            if (document.eseform.ateneo.value == "nessuno") {
+                alert("Selezionare un ateneo");
+                return false;
+            }
+            if ((document.eseform.lavoratore.checked) && (document.eseform.descr.value == "")) {
+                alert("Hai dichiarato di essere uno studente lavoratore: devi compilare il campo descrizione lavoro");
+                return false;
+            }
+            alert("Dati inseriti correttamente");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <form action="" method="post" name="eseform" onSubmit="return validaInvio();">
+        cognome e nome:
+        <input type="text" name="nome" size="50" maxlength="50" onChange="return controlloNome();">
+        <br>
+        sesso:
+        <input type="radio" name="sesso" value="M" onClick="valoreSesso=this.value;">M
+        <input type="radio" name="sesso" value="F" onClick="valoreSesso=this.value;">F
+        <br>
+        ateneo:
+        <select name="ateneo">
+            <option value="nessuno" selected></option>
+            <option value="cattolica"> Università Cattolica del Sacro Cuore </option>
+            <option value="bocconi"> Università Bocconi </option>
+            <option value="politecnico di milano"> Politecnico di Milano </option>
+        </select>
+        <br>
+        CAP:
+        <input type="text" name="cap" size="5" maxlength="5" onChange="return controlloCAP();">
+        <br>
+        sono uno studente lavoratore
+        <input type="checkbox" name="lavoratore">
+        <br>
+        descrizione lavoro svolto:
+        <textarea name="richieste" size="80" maxlength="80"></textarea>
+        <br>
+        <br>
+        <input type="submit" value="Invia">
+        <input type="reset" value="Reset">
+    </form>
+</body>
