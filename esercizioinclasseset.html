@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let x=10;
+    let y = 20;
+    let msg = "Il range di valori ammissibili è tra ${} e ${}";
+    document.write(msg);
+</script>
+
+
+<script> 
+document.writeln('<br>');
+// vedere se c'è una corrispondenza nel testo 
+//metodo test 
+let testo = "Ciao a tutti benvenuti in service now";
+let pattern = /Service/i;
+document.writeln('metodotest:');
+document.writeln(pattern.test(testo));
+document.writeln('<br>');
+
+//metodo search mi dice dove è 
+document.writeln('metodo search:');
+document.writeln(testo.search(pattern));
+document.writeln('<br>');
+
+//metodo exec():
+document.writeln('metodo exec:');
+document.writeln(pattern.exec(testo));
+document.writeln('<br>');
+
+//metodo match ritorna l'occorrenza di tutto il pattern trovato:
+let pattern1 = /e/g;
+document.writeln('metodo match:');
+document.writeln(testo.match(pattern1));
+document.writeln('<br>');
+
+
+
+
+</script>
+<script>
+    //creo un set
+
+    let setDati = new Set()
+    setDati.add('javascript')
+    
+    setDati.add('css')
+    
+    setDati.add('python')
+    
+    setDati.add('HTML')
+
+    
+    setDati.add('c++')
+
+    //metto un clone
+    setDati.add('c++')
+
+    //se esiste elemento 
+    document.writeln('è contenuto html ? ');
+
+    document.writeln(setDati.has('HTML'));
+    //proprietà per la lunghezza del set
+    document.writeln('<br>');
+
+    //restituire valore
+    let iterSetDati = setDati.values(); //oggetto setIterrator
+
+    //ciclo elementi set
+    document.writeln('<br>');
+    setDati.forEach((value)=> document.writeln(`${value}`  ));
+
+    //sintassi for in
+   
+
+</script>
+
+
+</body>
+</html>

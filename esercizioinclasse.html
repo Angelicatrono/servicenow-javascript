@@ -100,6 +100,12 @@ document.writeln('<br>');
 for (let[key, value] of mappa){
     document.write(` ${key} : ${value}` );//uso backtick 
 }
+
+
+
+// for each usa una arrow function per stampare gli elementi della mappa
+document.writeln('<br>');
+mappa.forEach((key,value) => {document.write(` ${key} : ${value} <br> ` )});
 </script>
 
 
